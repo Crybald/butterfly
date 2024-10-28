@@ -32,7 +32,9 @@ def error(message : str, module_name : str) -> None:
 
 
 def create_message(message : str, module_name : str) -> str:
-	picto = module_name.replace('face' , 'cara')
+	pictoa = module_name.replace('facefusion' , 'butterfly')
+	pictob = pictoa.replace('face_swapper' , 'kambiador')
+	picto = pictob.replace('face_enhancer' , 'mejorador')
 	scopes = picto.split('.')
 	first_scope = get_first(scopes)
 	last_scope = get_last(scopes)
