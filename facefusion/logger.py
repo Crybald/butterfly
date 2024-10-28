@@ -12,7 +12,7 @@ def init(log_level : LogLevel) -> None:
 
 
 def get_package_logger() -> Logger:
-	return getLogger('facefusion')
+	return getLogger('butterfly')
 
 
 def debug(message : str, module_name : str) -> None:
