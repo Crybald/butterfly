@@ -120,8 +120,7 @@ def conditional_process() -> ErrorCode:
 			return 2
 	conditional_append_reference_faces()
 	if is_image(state_manager.get_item('target_path')):
-		#return process_image(start_time)
-		return process_video(start_time)
+		return process_image(start_time)
 	if is_video(state_manager.get_item('target_path')):
 		return process_video(start_time)
 	return 0
