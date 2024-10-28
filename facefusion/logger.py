@@ -32,12 +32,16 @@ def error(message : str, module_name : str) -> None:
 
 
 def create_message(message : str, module_name : str) -> str:
-	scopes = module_name.split('.')
+	picto = module_name.replace('face' , 'cara')
+	scopes = picto.split('.')
 	first_scope = get_first(scopes)
 	last_scope = get_last(scopes)
 
 	if first_scope and last_scope:
-		return '[' + 'Butterfly' + '.' + last_scope.upper() + '] ' + message
+		return '[' first_scope.upper() + '.' + last_scope.upper() + '] ' + message
+		#return '[' first_scope.replace() + '.' + last_scope.replace() + '] ' + message
+		
+		
 	return message
 
 
