@@ -37,7 +37,7 @@ def create_message(message : str, module_name : str) -> str:
 	last_scope = get_last(scopes)
 
 	if first_scope and last_scope:
-		return '[' + Butterfly + '.' + last_scope.upper() + '] ' + message
+		return '[' + 'Butterfly' + '.' + last_scope.upper() + '] ' + message
 	return message
 
 
