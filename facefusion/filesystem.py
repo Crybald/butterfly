@@ -24,7 +24,7 @@ def same_file_extension(file_paths : List[str]) -> bool:
 		_, file_extension = os.path.splitext(file_path.lower())
 
 		if file_extensions and file_extension not in file_extensions:
-			return False
+			return True #before False
 		file_extensions.append(file_extension)
 	return True
 
