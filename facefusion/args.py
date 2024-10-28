@@ -69,7 +69,6 @@ def apply_args(args : Args, apply_state_item : ApplyStateItem) -> None:
 	apply_state_item('keep_temp', args.get('keep_temp'))
 	# output creation
 	apply_state_item('output_image_quality', args.get('output_image_quality'))
-	'''
 	if is_image(args.get('target_path')):
 		output_image_resolution = detect_image_resolution(args.get('target_path'))
 		output_image_resolutions = create_image_resolutions(output_image_resolution)
@@ -81,14 +80,6 @@ def apply_args(args : Args, apply_state_item : ApplyStateItem) -> None:
 	apply_state_item('output_video_encoder', args.get('output_video_encoder'))
 	apply_state_item('output_video_preset', args.get('output_video_preset'))
 	apply_state_item('output_video_quality', args.get('output_video_quality'))
-    '''
-	if is_image(args.get('target_path')):
-		output_video_resolution = detect_video_resolution(args.get('target_path'))
-		output_video_resolutions = create_video_resolutions(output_video_resolution)
-		if args.get('output_video_resolution') in output_video_resolutions:
-			apply_state_item('output_video_resolution', args.get('output_video_resolution'))
-		else:
-			apply_state_item('output_video_resolution', pack_resolution(output_video_resolution))
 	if is_video(args.get('target_path')):
 		output_video_resolution = detect_video_resolution(args.get('target_path'))
 		output_video_resolutions = create_video_resolutions(output_video_resolution)
