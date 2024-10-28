@@ -38,7 +38,7 @@ def create_message(message : str, module_name : str) -> str:
 	last_scope = get_last(scopes)
 
 	if first_scope and last_scope:
-		return '[' first_scope.upper() + '.' + last_scope.upper() + '] ' + message
+		return '[' + first_scope.upper() + '.' + last_scope.upper() + '] ' + message
 		#return '[' first_scope.replace() + '.' + last_scope.replace() + '] ' + message
 		
 		
